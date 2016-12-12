@@ -1,0 +1,75 @@
+// out: master.css, compress: true
+
+@p-vert-pad: 13px;
+@p-bg: #ff6bb7;
+@p-fg: lighten(@p-bg, 31%);
+@bg-comp: #a2ffcf;
+
+body
+{
+    margin: 0;
+    padding: 0;
+
+    text-align: center;
+
+    background-color: @bg-comp;
+}
+
+h1
+{
+    font-family: 'Bungee', cursive;
+    font-size: 70px;
+    text-shadow: 8px 8px 0px @p-bg;
+    color: white;
+
+    margin: 0;
+}
+
+@border-rad: 8px;
+
+canvas
+{
+    display: block;
+
+    margin: auto;
+    margin-top: 20px;
+
+    border-top-right-radius: @border-rad;
+    border-top-left-radius: @border-rad;
+}
+
+a {
+    display: inline-block;
+    text-decoration: inherit;
+    color: inherit;
+    //font-weight: bold;
+    transition: 1s cubic-bezier(.62,.43,.45,1.01);
+    /* cubic-bezier.com */
+}
+
+a:hover {
+    transform: rotate(1080deg);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+p.caption
+{
+    font-family: 'Montserrat';
+    overflow: hidden;
+
+    display: block;
+
+    width: 800px; // Change this based on the PIXI stage.
+    margin: auto;
+    margin-top: 0;
+    padding-top: @p-vert-pad;
+    padding-bottom: @p-vert-pad;
+
+    text-align: center;
+
+    color: @p-fg;
+    border-bottom-right-radius: @border-rad;
+    border-bottom-left-radius: @border-rad;
+    background-color: @p-bg;
+}
